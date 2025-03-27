@@ -63,7 +63,8 @@ else:
     print("The system has no unique solution.")
 ```
 ## Output:
-![EXPERIMENT MATHS FOR AI 1](https://github.com/user-attachments/assets/b01157b1-d885-4e3e-85fe-23a232ac527d)
+![ex1 mathsai](https://github.com/user-attachments/assets/00324714-c282-49f8-bd24-3526093f7b22)
+
 
 ## Result: 
 Thus the solutions for the linear equations are successfully solved using python program
