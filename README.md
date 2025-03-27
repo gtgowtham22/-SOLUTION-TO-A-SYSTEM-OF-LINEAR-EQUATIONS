@@ -15,19 +15,49 @@ Using the np.linalg.solve(), we can find the solutions.
 End the program
 ## Program:
 ```
+#Program to find the solution for the given linear equations.
+#Developed by: G.T.GOWTHAM
+#RegisterNumber:24901330
 import numpy as np
 
-def determinant(a, b, c, d):
-    return a * d - b * c
+# Given system of equations:
+# 5x - 3y - 10z = -9
+# 2x + 2y - 3z  = 4
+# -3x - y + 5z  = -1
 
-D = determinant(1, -3, 3, 1)
-Dx = determinant(0, -3, 10, 1)
-Dy = determinant(1, 0, 3, 10)
+# Determinant function for 3x3 matrix
+def determinant(a, b, c, d, e, f, g, h, i):
+    return (a * (e * i - f * h) - 
+            b * (d * i - f * g) + 
+            c * (d * h - e * g))
 
+# Coefficient matrix determinant (D)
+D = determinant(5, -3, -10,
+                2,  2, -3,
+               -3, -1,  5)
+
+# Dx matrix determinant (replace first column with constants)
+Dx = determinant(-9, -3, -10,
+                  4,  2, -3,
+                 -1, -1,  5)
+
+# Dy matrix determinant (replace second column with constants)
+Dy = determinant(5, -9, -10,
+                 2,  4, -3,
+                -3, -1,  5)
+
+# Dz matrix determinant (replace third column with constants)
+Dz = determinant(5, -3, -9,
+                 2,  2,  4,
+                -3, -1, -1)
+
+# Check if system has a unique solution
 if D != 0:
     x = Dx / D
     y = Dy / D
-    result = np.array([x, y])
+    z = Dz / D
+    # Print in exact NumPy format
+    result = np.array([x, y, z])
     print(result)
 else:
     print("The system has no unique solution.")
