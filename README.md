@@ -5,14 +5,37 @@ To write a python program to find a solution to a system of linear equations.
 1. 	Hardware – PCs
 2. 	Anaconda – Python 3.7 Installation / Moodle-Code Runner
 ## Algorithm:
-### Step 1: 
-Import the numpy module to use the built-in functions for calculation
-### Step 2: 
-Prepare the lists from each linear equations and assign in np.array()
-### Step 3: 
-Using the np.linalg.solve(), we can find the solutions.
-### Step 4: 
-End the program
+1.Start the program.
+
+2.Import numpy library.
+
+3.Define a function to calculate the determinant of a 3×3 matrix.
+
+4.Write the given system of equations and extract the coefficients and constants.
+
+5.Calculate the determinant of the coefficient matrix (D).
+
+6.Calculate the determinants:
+
+Dx by replacing the first column with constants.
+
+Dy by replacing the second column with constants.
+
+Dz by replacing the third column with constants.
+
+7.If D ≠ 0, then:
+
+Calculate x = Dx / D.
+
+Calculate y = Dy / D.
+
+Calculate z = Dz / D.
+
+8.Print the solution as an array.
+
+9.Else, print "The system has no unique solution."
+
+10.End the program.
 ## Program:
 ```
 #Program to find the solution for the given linear equations.
